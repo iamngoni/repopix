@@ -1,15 +1,23 @@
 {
     "@@locale": "en",
-    "deviceOffline_Title": "Device is offline",
+    "deviceOffline_Title": "Your phone is offline",
     "@deviceOffline_Title": {
-        "description": "Device is offline"
+        "description": "Your phone is offline"
     },
-    "deviceOffline_Message": "Your device is currently offline and not connected to the internet. Please check your connection.",
+    "deviceOffline_Message": "Your phone is currently offline and not connected to the internet. Please check your connection.",
     "@deviceOffline_Message": {
         "description": "Message displayed when the device is offline"
     },
-    "deviceOffline_BtnTitle": "Sorted now, let's try again",
+    "deviceOffline_BtnTitle": "Ok now, let's try again",
     "@deviceOffline_BtnTitle": {
         "description": "Title of the button displayed when the device is offline"
+    },
+    "getStarted_Title": "Welcome to {name}",
+    "@getStarted_Title": {
+        "description": "Title displayed on the get started page"
+    },
+    "getStarted_Subtitle": "Get started by signing in or creating an account",
+    "@getStarted_Subtitle": {
+        "description": "Subtitle displayed on the get started page"
     }
 }

@@ -1,7 +1,6 @@
 {
-    "@@locale": "es",
-    "counterAppBarTitle": "Contador",
-    "@counterAppBarTitle": {
-        "description": "Texto mostrado en la AppBar de la página del contador"
-    }
+  "@@locale": "es",
+  "deviceOffline_Title": "El dispositivo está sin conexión",
+  "deviceOffline_Message": "Tu dispositivo está sin conexión en este momento y no está conectado a Internet. Revisa tu conexión.",
+  "deviceOffline_BtnTitle": "Resuelto, intentemos de nuevo"
 }

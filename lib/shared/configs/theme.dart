@@ -14,6 +14,6 @@ class AppTheme {
   static ThemeData get lightTheme => ThemeData(
         primarySwatch: AppColors.materialBlue,
         scaffoldBackgroundColor: AppColors.background,
-        fontFamily: 'Nunito',
+        fontFamily: 'NunitoSans',
       );
 }
