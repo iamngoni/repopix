@@ -1,6 +1,6 @@
-import 'package:repopix/app/app.dart';
-import 'package:repopix/bootstrap.dart';
+import 'app/views/pages/app.dart';
+import 'bootstrap.dart';
 
 void main() {
-  bootstrap(() => const App());
+  bootstrap(RepoPixApp.new);
 }
