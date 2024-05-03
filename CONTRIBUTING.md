@@ -49,7 +49,7 @@ Examples:
 This helps in streamlining the development process and keeping the commit history clean and easy to navigate.
 
 ## Report bugs using Github's issues
-We use GitHub issues to track public bugs. Report a bug by [opening a new issue](https://github.com/iamngoni/repofix/issues/new); it's that easy!
+We use GitHub issues to track public bugs. Report a bug by [opening a new issue](https://github.com/iamngoni/repopix/issues/new); it's that easy!
 
 ## Write bug reports with detail, background, and sample code
 **Great Bug Reports** tend to have:
