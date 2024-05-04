@@ -19,5 +19,25 @@
     "getStarted_Subtitle": "Get started by signing in or creating an account",
     "@getStarted_Subtitle": {
         "description": "Subtitle displayed on the get started page"
+    },
+    "getStarted_DeviceAuthorization": "Device Authorization",
+    "@getStarted_DeviceAuthorization": {
+        "description": "Title of the device authorization page"
+    },
+    "getStarted_DeviceAuthorizationExpiry": "This code will expire in {time} minutes",
+    "@getStarted_DeviceAuthorizationExpiry": {
+        "description": "Message displayed on the device authorization page"
+    },
+    "getStarted_ContinueBtnTitle": "Copy Code and Continue",
+    "@getStarted_ContinueBtnTitle": {
+        "description": "Title of the button displayed on the get started page"
+    },
+    "getStarted_AuthorizationFailed": "Authorization failed",
+    "@getStarted_AuthorizationFailed": {
+        "description": "Message displayed when the device authorization fails"
+    },
+    "getStarted_AuthorizationSuccess": "Authorization successful",
+    "@getStarted_AuthorizationSuccess": {
+        "description": "Message displayed when the device authorization is successful"
     }
 }

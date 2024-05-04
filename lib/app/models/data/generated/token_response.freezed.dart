@@ -25,6 +25,12 @@ mixin _$TokenResponse {
   String get scope => throw _privateConstructorUsedError;
   @JsonKey(name: 'token_type')
   String get tokenType => throw _privateConstructorUsedError;
+  @JsonKey(name: 'expires_in')
+  int get expiresIn => throw _privateConstructorUsedError;
+  @JsonKey(name: 'refresh_token')
+  String get refreshToken => throw _privateConstructorUsedError;
+  @JsonKey(name: 'refresh_token_expires_in')
+  int get refreshTokenExpiresIn => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -41,7 +47,10 @@ abstract class $TokenResponseCopyWith<$Res> {
   $Res call(
       {@JsonKey(name: 'access_token') String accessToken,
       String scope,
-      @JsonKey(name: 'token_type') String tokenType});
+      @JsonKey(name: 'token_type') String tokenType,
+      @JsonKey(name: 'expires_in') int expiresIn,
+      @JsonKey(name: 'refresh_token') String refreshToken,
+      @JsonKey(name: 'refresh_token_expires_in') int refreshTokenExpiresIn});
 }
 
 /// @nodoc
@@ -60,6 +69,9 @@ class _$TokenResponseCopyWithImpl<$Res, $Val extends TokenResponse>
     Object? accessToken = null,
     Object? scope = null,
     Object? tokenType = null,
+    Object? expiresIn = null,
+    Object? refreshToken = null,
+    Object? refreshTokenExpiresIn = null,
   }) {
     return _then(_value.copyWith(
       accessToken: null == accessToken
@@ -74,6 +86,18 @@ class _$TokenResponseCopyWithImpl<$Res, $Val extends TokenResponse>
           ? _value.tokenType
           : tokenType // ignore: cast_nullable_to_non_nullable
               as String,
+      expiresIn: null == expiresIn
+          ? _value.expiresIn
+          : expiresIn // ignore: cast_nullable_to_non_nullable
+              as int,
+      refreshToken: null == refreshToken
+          ? _value.refreshToken
+          : refreshToken // ignore: cast_nullable_to_non_nullable
+              as String,
+      refreshTokenExpiresIn: null == refreshTokenExpiresIn
+          ? _value.refreshTokenExpiresIn
+          : refreshTokenExpiresIn // ignore: cast_nullable_to_non_nullable
+              as int,
     ) as $Val);
   }
 }
@@ -89,7 +113,10 @@ abstract class _$$TokenResponseImplCopyWith<$Res>
   $Res call(
       {@JsonKey(name: 'access_token') String accessToken,
       String scope,
-      @JsonKey(name: 'token_type') String tokenType});
+      @JsonKey(name: 'token_type') String tokenType,
+      @JsonKey(name: 'expires_in') int expiresIn,
+      @JsonKey(name: 'refresh_token') String refreshToken,
+      @JsonKey(name: 'refresh_token_expires_in') int refreshTokenExpiresIn});
 }
 
 /// @nodoc
@@ -106,6 +133,9 @@ class __$$TokenResponseImplCopyWithImpl<$Res>
     Object? accessToken = null,
     Object? scope = null,
     Object? tokenType = null,
+    Object? expiresIn = null,
+    Object? refreshToken = null,
+    Object? refreshTokenExpiresIn = null,
   }) {
     return _then(_$TokenResponseImpl(
       accessToken: null == accessToken
@@ -120,6 +150,18 @@ class __$$TokenResponseImplCopyWithImpl<$Res>
           ? _value.tokenType
           : tokenType // ignore: cast_nullable_to_non_nullable
               as String,
+      expiresIn: null == expiresIn
+          ? _value.expiresIn
+          : expiresIn // ignore: cast_nullable_to_non_nullable
+              as int,
+      refreshToken: null == refreshToken
+          ? _value.refreshToken
+          : refreshToken // ignore: cast_nullable_to_non_nullable
+              as String,
+      refreshTokenExpiresIn: null == refreshTokenExpiresIn
+          ? _value.refreshTokenExpiresIn
+          : refreshTokenExpiresIn // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -130,7 +172,11 @@ class _$TokenResponseImpl extends _TokenResponse {
   const _$TokenResponseImpl(
       {@JsonKey(name: 'access_token') required this.accessToken,
       required this.scope,
-      @JsonKey(name: 'token_type') required this.tokenType})
+      @JsonKey(name: 'token_type') required this.tokenType,
+      @JsonKey(name: 'expires_in') required this.expiresIn,
+      @JsonKey(name: 'refresh_token') required this.refreshToken,
+      @JsonKey(name: 'refresh_token_expires_in')
+      required this.refreshTokenExpiresIn})
       : super._();
 
   factory _$TokenResponseImpl.fromJson(Map<String, dynamic> json) =>
@@ -144,10 +190,19 @@ class _$TokenResponseImpl extends _TokenResponse {
   @override
   @JsonKey(name: 'token_type')
   final String tokenType;
+  @override
+  @JsonKey(name: 'expires_in')
+  final int expiresIn;
+  @override
+  @JsonKey(name: 'refresh_token')
+  final String refreshToken;
+  @override
+  @JsonKey(name: 'refresh_token_expires_in')
+  final int refreshTokenExpiresIn;
 
   @override
   String toString() {
-    return 'TokenResponse(accessToken: $accessToken, scope: $scope, tokenType: $tokenType)';
+    return 'TokenResponse(accessToken: $accessToken, scope: $scope, tokenType: $tokenType, expiresIn: $expiresIn, refreshToken: $refreshToken, refreshTokenExpiresIn: $refreshTokenExpiresIn)';
   }
 
   @override
@@ -159,12 +214,19 @@ class _$TokenResponseImpl extends _TokenResponse {
                 other.accessToken == accessToken) &&
             (identical(other.scope, scope) || other.scope == scope) &&
             (identical(other.tokenType, tokenType) ||
-                other.tokenType == tokenType));
+                other.tokenType == tokenType) &&
+            (identical(other.expiresIn, expiresIn) ||
+                other.expiresIn == expiresIn) &&
+            (identical(other.refreshToken, refreshToken) ||
+                other.refreshToken == refreshToken) &&
+            (identical(other.refreshTokenExpiresIn, refreshTokenExpiresIn) ||
+                other.refreshTokenExpiresIn == refreshTokenExpiresIn));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, accessToken, scope, tokenType);
+  int get hashCode => Object.hash(runtimeType, accessToken, scope, tokenType,
+      expiresIn, refreshToken, refreshTokenExpiresIn);
 
   @JsonKey(ignore: true)
   @override
@@ -182,10 +244,13 @@ class _$TokenResponseImpl extends _TokenResponse {
 
 abstract class _TokenResponse extends TokenResponse {
   const factory _TokenResponse(
-          {@JsonKey(name: 'access_token') required final String accessToken,
-          required final String scope,
-          @JsonKey(name: 'token_type') required final String tokenType}) =
-      _$TokenResponseImpl;
+      {@JsonKey(name: 'access_token') required final String accessToken,
+      required final String scope,
+      @JsonKey(name: 'token_type') required final String tokenType,
+      @JsonKey(name: 'expires_in') required final int expiresIn,
+      @JsonKey(name: 'refresh_token') required final String refreshToken,
+      @JsonKey(name: 'refresh_token_expires_in')
+      required final int refreshTokenExpiresIn}) = _$TokenResponseImpl;
   const _TokenResponse._() : super._();
 
   factory _TokenResponse.fromJson(Map<String, dynamic> json) =
@@ -199,6 +264,15 @@ abstract class _TokenResponse extends TokenResponse {
   @override
   @JsonKey(name: 'token_type')
   String get tokenType;
+  @override
+  @JsonKey(name: 'expires_in')
+  int get expiresIn;
+  @override
+  @JsonKey(name: 'refresh_token')
+  String get refreshToken;
+  @override
+  @JsonKey(name: 'refresh_token_expires_in')
+  int get refreshTokenExpiresIn;
   @override
   @JsonKey(ignore: true)
   _$$TokenResponseImplCopyWith<_$TokenResponseImpl> get copyWith =>

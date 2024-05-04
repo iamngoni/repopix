@@ -18,18 +18,21 @@ dynamic $showModal(
   BuildContext context, {
   Widget? child,
   double? maxHeight,
+  bool isDismissible = true,
 }) async {
   if (Platform.isIOS) {
     return await _showCupertinoModal(
       context,
       child: child,
       maxHeight: maxHeight,
+      isDismissible: isDismissible,
     );
   } else {
     return await _showMaterialModal(
       context,
       child: child,
       maxHeight: maxHeight,
+      isDismissible: isDismissible,
     );
   }
 }
@@ -50,6 +53,7 @@ Future<void> _showMaterialModal(
   BuildContext context, {
   Widget? child,
   double? maxHeight,
+  bool isDismissible = true,
 }) async {
   return showMaterialModalBottomSheet(
     context: context,
@@ -59,6 +63,7 @@ Future<void> _showMaterialModal(
         top: Radius.circular(20),
       ),
     ),
+    isDismissible: isDismissible,
     builder: (context) {
       return _buildSizedBox(context, child, maxHeight);
     },
@@ -69,11 +74,13 @@ Future<void> _showCupertinoModal(
   BuildContext context, {
   Widget? child,
   double? maxHeight,
+  bool isDismissible = true,
 }) async {
   return showCupertinoModalBottomSheet(
     context: context,
     topRadius: const Radius.circular(20),
     barrierColor: AppColors.blue.withOpacity(0.9),
+    isDismissible: isDismissible,
     builder: (context) {
       return Material(
         child: _buildSizedBox(
