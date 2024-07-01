@@ -17,7 +17,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_bloc: ^8.1.4
-  flutter_local_notifications:
+  flutter_local_notifications: 17.2.1
   flutter_localizations:
     sdk: flutter
   flutter_secure_storage: ^9.0.0
